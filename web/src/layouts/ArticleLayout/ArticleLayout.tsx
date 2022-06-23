@@ -7,17 +7,27 @@ type ArticleLayoutProps = {
 const ArticleLayout = ({ children }: ArticleLayoutProps) => {
   return (
     <>
-      <header className="grid grid-cols-2 gap-4 place-content-center">
-        <h1 className="text-2xl font-bold ">
-          <Link to={routes.home()}>Redwood Blog</Link>
+      <header className="grid grid-cols-10 gap-4 place-content-center bg-slate-100 dark:bg-neutral-800 text-slate-900 dark:text-white p-1.5">
+        <h1 className="font-semibold font-body w-16 grid place-content-center p-4">
+          <Link to={routes.home()}>LP</Link>
         </h1>
-        <nav>
-          <ul className="grid grid-cols-6 gap-4 place-content-center bg-slate-400">
+
+        <div className="text-2xl font-body font-black rounded-lg dark:bg-neutral-700 p-2 w-16 grid place-content-center">
+          1
+        </div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <nav className="p-2  grid grow gap-4  place-content-center">
+          <ul className="grid grid-cols-2 gap-4 place-items-center">
             <li>
               <Link to={routes.home()}>Home</Link>
-            </li>
-            <li>
-              <Link to={routes.about()}>About</Link>
             </li>
             <li>
               <Link to={routes.about()}>About</Link>
@@ -25,7 +35,10 @@ const ArticleLayout = ({ children }: ArticleLayoutProps) => {
           </ul>
         </nav>
       </header>
-      <main> {children}</main>
+      <main className="bg-white dark:bg-neutral-900 h-screen  text-slate-900 dark:text-white text-opacity-90 font-serif">
+        {' '}
+        {children}
+      </main>
     </>
   )
 }
